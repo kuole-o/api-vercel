@@ -1,4 +1,4 @@
-import serveHotApi from "dailyhot-api";
+import serveHotApi from "guole.fun.api";
 
 serveHotApi();
 
