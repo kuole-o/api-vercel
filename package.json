@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cp node_modules/guole.fun.api/package.json public/ && node index.js",
-    "build:vercel": "vercel"
+    "build:vercel": "cp node_modules/guole.fun.api/package.json public/ && vercel"
   },
   "dependencies": {
     "guole.fun.api": "^2.0.14"
