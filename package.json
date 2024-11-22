@@ -10,7 +10,7 @@
     "build:vercel": "vercel"
   },
   "dependencies": {
-    "guole.fun.api": "^2.0.15"
+    "guole.fun.api": "^2.0.16"
   },
   "devDependencies": {
     "@vercel/node": "^3.2.23",
