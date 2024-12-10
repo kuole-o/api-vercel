@@ -6,7 +6,7 @@
   "author": "Guo Le <guole.fun@qq.com>",
   "main": "index.js",
   "scripts": {
-    "build": "cp node_modules/guole.fun.api/package.json public/ && node index.js",
+    "build": "node copyPackageJson.js && node index.js",
     "build:vercel": "vercel"
   },
   "dependencies": {
