@@ -18,5 +18,6 @@
       }
     }
   ],
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "buildCommand": "node copyPackageJson.js && node index.js"
 }
