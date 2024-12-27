@@ -6,8 +6,8 @@
   "author": "Guo Le <guole.fun@qq.com>",
   "main": "index.js",
   "scripts": {
-    "build": "node copyPackageJson.js && node index.js",
-    "build:vercel": "vercel"
+    "build": "node copyPackageJson.js && vue-cli-service build",
+    "build:vercel": "vue-cli-service build"
   },
   "dependencies": {
     "guole.fun.api": "^2.0.32"
