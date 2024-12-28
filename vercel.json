@@ -14,14 +14,6 @@
   ],
   "routes": [
     {
-      "src": "/*.png",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/*.ico",
-      "dest": "/public/$1.png"
-    },
-    {
       "src": "/(.*)",
       "dest": "/",
       "headers": {

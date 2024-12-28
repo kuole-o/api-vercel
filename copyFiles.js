@@ -31,6 +31,7 @@ const copyFilesToRoot = async (sources, rootDir) => {
 
 const rootDir = path.resolve(__dirname);
 
+console.log("准备处理文件拷贝！")
 // 调用方法，传入多个源文件路径
 copyFilesToRoot([
   'node_modules/guole.fun.api/package.json',
@@ -39,6 +40,5 @@ copyFilesToRoot([
 ], rootDir);
 
 copyFilesToRoot([
-  'public/ico/favicon.png',
-  'public/ico/error.png'
-], path.join(rootDir, 'ico'));
+  'node_modules/guole.fun.api/package.json'
+], path.join(rootDir, 'public'));
