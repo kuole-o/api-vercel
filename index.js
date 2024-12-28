@@ -25,6 +25,6 @@ app.get('/ip', (c) => {
 });
 
 // 挂载 guole.fun.api 的 Hono 应用到 /api 路由下
-app.mount('/*', hotApi);
+app.mount('/api/*', hotApi);
 
 export default app;
