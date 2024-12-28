@@ -39,10 +39,10 @@ console.log(rootDir);
 console.log("准备处理文件拷贝！");
 
 // 调用方法，传入多个源文件路径
-copyFilesToRoot([
-  'public/favicon.png',
-  'public/error.png'
-], rootDir);
+// copyFilesToRoot([
+//   'public/favicon.png',
+//   'public/error.png'
+// ], rootDir);
 
 // 目标路径的拷贝
 copyFilesToRoot([
