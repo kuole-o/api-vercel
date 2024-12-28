@@ -8,11 +8,10 @@
   "scripts": {
     "build": "npm-run-all build-api copyFiles",
     "build-api": "node index.js",
-    "build:vercel": "vercel",
     "copyFiles": "node copyFiles.js"
   },
   "dependencies": {
-    "guole.fun.api": "^2.0.33"
+    "guole.fun.api": "^2.0.34"
   },
   "devDependencies": {
     "@vercel/node": "^3.2.23",
