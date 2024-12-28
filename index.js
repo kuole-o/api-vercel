@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
-import hotApi from 'guole.fun.api'; // 确保 guole.fun.api 正确导出 Hono 应用
+import hotApi from 'guole.fun.api';
 import { ipAddress, geolocation } from '@vercel/edge';
-import logger from 'guole.fun.api/dist/utils/logger.js'; // 确保路径正确
+import logger from 'guole.fun.api/dist/utils/logger.js';
 
 const app = new Hono();
 
@@ -25,6 +25,6 @@ app.get('/ip', (c) => {
 });
 
 // 挂载 guole.fun.api 的 Hono 应用到 /api 路由下
-app.route('/*', hotApi);
+app.mount('/*', hotApi);
 
 export default app;
