@@ -1,3 +1,6 @@
 import serveHotApi from "guole.fun.api";
 
-serveHotApi();
+const port = process.env.PORT;
+console.log("port: ", port);
+
+serveHotApi(port);

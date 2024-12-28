@@ -11,7 +11,7 @@
     "copyFiles": "node copyFiles.js"
   },
   "dependencies": {
-    "guole.fun.api": "^2.0.34"
+    "guole.fun.api": "^2.0.35"
   },
   "devDependencies": {
     "@vercel/node": "^3.2.23",
