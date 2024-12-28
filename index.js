@@ -1,6 +1,12 @@
+import express from "express";
 import serveHotApi from "guole.fun.api";
 
-const port = process.env.PORT;
-console.log("port: ", port);
+const app = express();
 
-serveHotApi(port);
+app.use("/*.png", express.static("public"));
+app.use("/*.ico", express.static("public/ico"));
+app.use("/package.json", express.static("guole.fun.api.package.json"));
+
+app.use(serveHotApi());
+
+export default app;
