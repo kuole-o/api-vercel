@@ -1,20 +1,20 @@
-import express from "express";
-import serveHotApi from "guole.fun.api";
+import { Hono } from 'hono';
+import hotApi from 'guole.fun.api'; // 确保 guole.fun.api 正确导出 Hono 应用
 import { ipAddress, geolocation } from '@vercel/edge';
-import logger from "guole.fun.api/dist/utils/logger.js"; // 确保正确导入 logger
+import logger from 'guole.fun.api/dist/utils/logger.js'; // 确保路径正确
 
-const app = express();
+const app = new Hono();
 
 // /ip 接口逻辑
-app.get('/ip', (req, res) => {
-  const ip = ipAddress(req);
-  const { pathname } = new URL(req.url, `http://${req.headers.host}`);
+app.get('/ip', (c) => {
+  const ip = ipAddress(c.req);
+  const { pathname } = new URL(c.req.url);
   logger.info(`IP: ${ip}, Path: ${pathname}`);
   
-  const geo = geolocation(req);
+  const geo = geolocation(c.req);
   logger.info(`Geolocation: ${JSON.stringify(geo)}`);
   
-  res.json({
+  return c.json({
     ip,
     ...geo
   }, {
@@ -24,7 +24,7 @@ app.get('/ip', (req, res) => {
   });
 });
 
-// 使用 guole.fun.api
-app.use(serveHotApi());
+// 挂载 guole.fun.api 的 Hono 应用到 /api 路由下
+app.route('/*', hotApi);
 
 export default app;
