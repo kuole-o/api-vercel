@@ -22,6 +22,8 @@ app.get('/ip', (req, res) => {
 });
 
 // 其他 API 路由
-app.use(serveHotApi);
+app.use(serveHotApi());
 
-export default app;
+//serveHotApi()
+
+export default app;s
