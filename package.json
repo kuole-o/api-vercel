@@ -6,7 +6,7 @@
   "author": "Guo Le <guole.fun@qq.com>",
   "main": "api/index.js",
   "scripts": {
-    "build": "npm-run-all build-api copyFiles",
+    "build": "npm-run-all copyFiles build-api",
     "build-api": "node api/index.js",
     "start": "node api/index.js",
     "dev": "vercel dev",
