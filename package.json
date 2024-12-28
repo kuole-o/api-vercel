@@ -7,17 +7,17 @@
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all build-api copyFiles",
-    "build-api": "node index.js",
+    "build-api": "node api/index.js",
+    "start": "node api/index.js",
+    "dev": "vercel dev",
     "copyFiles": "node copyFiles.js"
   },
   "dependencies": {
     "@vercel/edge": "^1.1.4",
-    "guole.fun.api": "^2.0.39",
-    "hono": "^4.6.15"
+    "guole.fun.api": "^2.0.40"
   },
   "devDependencies": {
-    "@vercel/node": "^3.2.29",
     "npm-run-all": "^4.1.5",
-    "vercel": "^34.2.8"
+    "vercel": "^39.2.2"
   }
 }
