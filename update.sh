@@ -4,7 +4,7 @@ echo -e "\033[0;32mDeploying updates to api.guole.fun...\033[0m"
 cd d:/src/api-vercel
 
 rm -r public/package.json
-copy node_modules/guole.fun.api/package.json public
+cp node_modules/guole.fun.api/package.json public
 
 git add .
 msg="🏖️ API更新于 `date`"
