@@ -12,7 +12,7 @@
     "update": "vercel"
   },
   "dependencies": {
-    "guole.fun.api": "^2.0.47"
+    "guole.fun.api": "^2.0.48"
   },
   "devDependencies": {
     "vercel": "^39.2.2"
