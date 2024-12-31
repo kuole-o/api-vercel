@@ -15,7 +15,7 @@
   "routes": [
     {
       "src": "/public/(.*)",
-      "dest": "/node_modules/guole.fun.api/public/$1"
+      "dest": "node_modules/guole.fun.api/public/$1"
     },
     {
       "src": "/(.*)",
