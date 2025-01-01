@@ -32,3 +32,4 @@ git push github main
 # 继续执行（保留 Bash 环境）
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
   exec /bin/bash
+fi
