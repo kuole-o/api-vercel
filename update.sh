@@ -1,22 +1,33 @@
 #!/bin/bash
+
 echo -e "\033[0;32mDeploying updates to api.guole.fun...\033[0m"
 
-cd d:/src/api-vercel
+# 检测系统类型
+if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
+  # Windows 环境路径
+  PROJECT_DIR="d:/src/api-vercel"
+else
+  # macOS 或其他 UNIX 环境路径
+  PROJECT_DIR="/Users/guole/Documents/src/api-vercel"
+fi
 
-# rm -r public/package.json
+# 切换到项目目录
+cd "$PROJECT_DIR" || { echo "项目路径不存在: $PROJECT_DIR"; exit 1; }
+
+# 移动 package.json（如需要）
+# rm -f public/package.json
 # cp node_modules/guole.fun.api/package.json public
 
+# 提交更改
 git add .
-msg="🏖️ API更新于 `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
+msg="🏖️ API更新于 $(date)"
+if [ $# -eq 1 ]; then
+  msg="$1"
 fi
 git commit -m "$msg"
 
-# Push source and build repos.
+# 推送代码
 git push github main
 
-#./deplay.bat
-
-# push执行完成，不自动退出
+# 继续执行（保留 Bash 环境）
 exec /bin/bash
