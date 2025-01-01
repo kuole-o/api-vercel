@@ -15,11 +15,14 @@ fi
 cd "$PROJECT_DIR" || { echo "项目路径不存在: $PROJECT_DIR"; exit 1; }
 npm i
 
-cp -ru node_modules/guole.fun.api/package.json public
+if [[ -e public/package.json ]]; then
+  rm -r public/package.json
+fi
+cp node_modules/guole.fun.api/package.json public
 
 # 提交更改
 git add .
-msg="🏖️ API更新于 $(date)"
+msg="🏖️ API更新于 $(date '+%Y-%m-%d %H:%M:%S')"
 if [ $# -eq 1 ]; then
   msg="$1"
 fi
