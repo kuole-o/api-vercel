@@ -1,3 +1,3 @@
-import serveHotApi from 'guole.fun.api';
+import createServer from 'guole.fun.api';
 
-serveHotApi();
+export default createServer();

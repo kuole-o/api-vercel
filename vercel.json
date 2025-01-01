@@ -6,12 +6,12 @@
       "use": "@vercel/node",
       "config": {
         "includeFiles": [
-          "public/**/*",
-          "node_modules/guole.fun.api/public/*"
+          "public/**/*"
         ]
       }
     }
   ],
+  "buildCommand": "npm install && cp -ru node_modules/guole.fun.api/package.json ./public && npm run build",
   "routes": [
     {
       "src": "/(.*)",
