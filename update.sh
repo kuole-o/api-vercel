@@ -13,10 +13,9 @@ fi
 
 # 切换到项目目录
 cd "$PROJECT_DIR" || { echo "项目路径不存在: $PROJECT_DIR"; exit 1; }
+npm i
 
-# 移动 package.json（如需要）
-# rm -f public/package.json
-# cp node_modules/guole.fun.api/package.json public
+cp -ru node_modules/guole.fun.api/package.json public
 
 # 提交更改
 git add .
